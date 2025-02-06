@@ -175,9 +175,6 @@
 
 
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
-    tools:context=".Register">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
