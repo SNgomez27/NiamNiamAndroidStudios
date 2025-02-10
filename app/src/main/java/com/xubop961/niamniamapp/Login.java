@@ -25,7 +25,8 @@ public class Login extends AppCompatActivity {
         BotonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                String loginUsuario = String.valueOf(LoginEmail.getEditText().getText());
+                String loginContraseña = String.valueOf(LoginPassword.getEditText().getText());
             }
         });
     }
