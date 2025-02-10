@@ -105,6 +105,7 @@
                 android:hint="Name">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:contentDescription="Campo de Nombre"
@@ -122,6 +123,7 @@
                 android:hint="E-mail">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:contentDescription="Campo de correo electrónico"
@@ -139,6 +141,7 @@
                 android:hint="Password">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerContra"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:contentDescription="Campo de contraseña"
@@ -156,6 +159,7 @@
                 android:hint="Repeat Password">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerContraRepit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:contentDescription="Campo de repetir contraseña"
@@ -166,6 +170,7 @@
 
 
             <Button
+                android:id="@+id/botonRegist"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="50dp"
