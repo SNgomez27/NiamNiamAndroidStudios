@@ -14,6 +14,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.xubop961.niamniamapp.fragments.AdapterLogRegfrag;
 
 public class Login extends AppCompatActivity {
 
@@ -23,10 +24,15 @@ public class Login extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
+        // Inicializar ViewPager2 y Adaptador
+        ViewPager2 viewPager = findViewById(R.id.viewPagerAuth);
+        AdapterLogRegfrag adapter = new AdapterLogRegfrag(this);
+        viewPager.setAdapter(adapter);
+
+        // Inicializar elementos de UI
         Button loginButton = findViewById(R.id.botonLogIn);
         TextInputLayout inputEmail = findViewById(R.id.inputEmail);
         TextInputLayout inputPassword = findViewById(R.id.inputPassword);
-
         TextInputEditText emailEditText = findViewById(R.id.LogEmail);
         TextInputEditText passwordEditText = findViewById(R.id.LogPassword);
 
@@ -38,8 +44,8 @@ public class Login extends AppCompatActivity {
                 String loginUsuario = emailEditText.getText().toString().trim();
                 String loginContraseña = passwordEditText.getText().toString().trim();
 
-                String Registeremail = preferences.getString("usasUsuario", "Anonimo");
-                String RegisterPassword = preferences.getString("usasContraseña", "Anonimo");
+                String registerEmail = preferences.getString("usasUsuario", "Anonimo");
+                String registerPassword = preferences.getString("usasContraseña", "Anonimo");
 
                 if (loginUsuario.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Coloca un usuario", Toast.LENGTH_LONG).show();
@@ -57,6 +63,4 @@ public class Login extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
-    ViewPager2 viewPager = findViewById(R.id.vi)
 }
-
