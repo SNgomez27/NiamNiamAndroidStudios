@@ -42,7 +42,7 @@ public class Register extends AppCompatActivity {
                 }else{
                     Toast confirmado = Toast.makeText(getApplicationContext(),"Te has registrado con exito",Toast.LENGTH_SHORT);
                     confirmado.show();
-                    SharedPreferences preferences = getSharedPreferences("Usuario", Context.MODE_PRIVATE;
+                    SharedPreferences preferences = getSharedPreferences("Usuario", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("useUsuario", useUsuario);
                     editor.putString("usePassword", usePassword);
